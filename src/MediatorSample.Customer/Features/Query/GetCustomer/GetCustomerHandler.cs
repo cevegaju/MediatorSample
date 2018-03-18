@@ -15,8 +15,7 @@ namespace MediatorSample.Customer.Features.Query.GetCustomer
             _db = db;
         }
         public async Task<Customer> Handle(CustomerId request, CancellationToken cancellationToken)
-        {
-            SqlMapperExtensions.TableNameMapper = (type) => { return $"{ type.Name }"; };
+        {            
             using (var connection = new SqlConnection(_db.ConnectionString))
             {
                 return await connection.GetAsync<Customer>(request.Id);
