@@ -1,11 +1,11 @@
-﻿using MediatorSample.Customer.DataAccess;
+﻿using MediatorSample.CustomerApi.DataAccess;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MediatorSample.Customer
+namespace MediatorSample.CustomerApi
 {
     public class Startup
     {

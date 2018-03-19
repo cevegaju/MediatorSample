@@ -1,6 +1,6 @@
 ﻿using Dapper.Contrib.Extensions;
 
-namespace MediatorSample.Customer.DataAccess
+namespace MediatorSample.CustomerApi.DataAccess
 {
     public class Database : IDatabase
     {

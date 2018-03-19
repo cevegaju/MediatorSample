@@ -1,6 +1,7 @@
 ﻿using MediatR;
+using MediatorSample.CustomerApi.Models;
 
-namespace MediatorSample.Customer.Features.Query.GetCustomer
+namespace MediatorSample.CustomerApi.Features.Query
 {
     public class CustomerId:IRequest<Customer>
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MediatorSample.Customer.DataAccess
+namespace MediatorSample.CustomerApi.DataAccess
 {
     public interface IDatabase
     {

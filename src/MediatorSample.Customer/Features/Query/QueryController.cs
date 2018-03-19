@@ -1,9 +1,8 @@
 ﻿using System.Threading.Tasks;
-using MediatorSample.Customer.Features.Query.GetCustomer;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MediatorSample.Customer.Features.Query
+namespace MediatorSample.CustomerApi.Features.Query
 {
     [Produces("application/json")]
     [Route("api/customer")]
@@ -20,6 +19,14 @@ namespace MediatorSample.Customer.Features.Query
         public async Task<IActionResult> GetCustomer(int id)
         {
             var result = await mediator.Send(new CustomerId(id));
+            return Ok(result);
+        }
+
+        [HttpGet]
+        [Route("list")]
+        public async Task<IActionResult> GetCustomerList()
+        {
+            var result = await mediator.Send(new CustomerList());
             return Ok(result);
         }
     }

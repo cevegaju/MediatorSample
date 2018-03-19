@@ -1,4 +1,4 @@
-﻿namespace MediatorSample.Customer.Features.Query.GetCustomer
+﻿namespace MediatorSample.CustomerApi.Models
 {
     public class Customer
     {
