@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using MediatorSample.CustomerApi.Models;
+using System;
 
 namespace MediatorSample.CustomerApi.Features.Query
 {

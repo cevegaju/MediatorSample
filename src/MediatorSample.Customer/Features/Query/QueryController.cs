@@ -8,17 +8,17 @@ namespace MediatorSample.CustomerApi.Features.Query
     [Route("api/customer")]
     public class QueryController : Controller
     {
-        private readonly IMediator mediator;
+        private readonly IMediator _mediator;
         public QueryController(IMediator mediator)
         {
-            this.mediator = mediator;
+            _mediator = mediator;
         }
 
         [HttpGet]
         [Route("{id:int}")]
         public async Task<IActionResult> GetCustomer(int id)
         {
-            var result = await mediator.Send(new CustomerId(id));
+            var result = await _mediator.Send(new CustomerId(id));
             return Ok(result);
         }
 
@@ -26,8 +26,8 @@ namespace MediatorSample.CustomerApi.Features.Query
         [Route("list")]
         public async Task<IActionResult> GetCustomerList()
         {
-            var result = await mediator.Send(new CustomerList());
+            var result = await _mediator.Send(new CustomerList());
             return Ok(result);
-        }
+        }        
     }
 }
